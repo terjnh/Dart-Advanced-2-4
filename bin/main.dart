@@ -14,7 +14,7 @@ main(List<String> arguments) async {
 Future<File> appendFile() {
   File file = new File(Directory.current.path + '/test.txt');
   DateTime dt = new DateTime.now();
-  return file.writeAsString(dt.toString() + '\r\n', mode: FileMode.APPEND);
+  return file.writeAsString(dt.toString() + '\r\n', mode: FileMode.append);
 }
 
 Future<String> readFile() {
